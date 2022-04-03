@@ -1,0 +1,23 @@
+def products(nums):
+    result = []
+    
+    for i in nums:
+        factors = []
+        for x in nums:
+            if x == i:
+                print("")
+            else:
+                factors.append(x)
+        product = 0
+        for factor in factors:
+            if product == 0:
+                product = factor
+            else:
+                product = product * factor
+        result.append(product)
+        factors.clear()
+    return result
+    
+nums = [14,67,7,2]
+
+print(products(nums))
